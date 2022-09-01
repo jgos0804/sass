@@ -1,0 +1,64 @@
+/* Primer comentario para ambos archivos*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.contenedor {
+  display: grid;
+  grid-template-areas: "logotipo logotipo logotipo logotipo" " nav-link nav-link nav-link nav-link " " contenido contenido contenido " " iframe iframe iframe iframe "; }
+
+nav ul li {
+  background-color: black;
+  display: inline-block;
+  margin: 10px;
+  padding: 5px;
+  border: 2px solid white;
+  border-radius: 10%; }
+  nav ul li li:hover {
+    background-color: gray;
+    transform: scale(0.9);
+    box-shadow: 1px 1px 1px black; }
+
+header {
+  grid-area: header;
+  text-align: center;
+  background-image: linear-gradient(to bottom, gray, white);
+  margin-top: 200px; }
+  header .logoinsta {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 10%; }
+    header .logoinsta img {
+      width: 10%; }
+      header .logoinsta img .texto {
+        text-align: center;
+        background-image: linear-gradient(to bottom, gray, white);
+        margin-top: 200px; }
+        header .logoinsta img .texto h1 {
+          color: white;
+          text-shadow: 1px 1px 10px black;
+          text-decoration: underline;
+          background-color: white;
+          padding: 20px; }
+          header .logoinsta img .texto h1 p {
+            color: black;
+            text-align: center;
+            font-weight: bolder;
+            font-size: 30px; }
+
+footer {
+  margin-top: 90px; }
+  footer .etiqueta__h2 {
+    color: black;
+    text-align: center;
+    font-weight: bolder;
+    background-image: linear-gradient(to top, gray, white); }
+    footer .etiqueta__h2 iframe {
+      grid-area: iframe;
+      display: flex;
+      padding: 10px;
+      justify-content: center;
+      width: 500px;
+      height: 350px; }

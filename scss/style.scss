@@ -1,0 +1,99 @@
+// Primera linea de comentario
+/* Primer comentario para ambos archivos*/
+
+@import "utilities/variables";
+@import "base/lista";
+@import "base/mixin";
+
+// NESTING
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.contenedor{
+        display: grid;
+         grid-template-areas: "logotipo logotipo logotipo logotipo"
+                       " nav-link nav-link nav-link nav-link "
+                       " contenido contenido contenido "
+                       " iframe iframe iframe iframe " ;
+        
+    }
+
+nav{
+    ul{
+      li{
+         background-color: black;
+         display: inline-block;
+         margin: 10px;
+         padding: 5px;
+         border: 2px solid white;
+         border-radius: 10%;
+        li:hover{
+         background-color:gray;
+         transform: scale(0.9);
+         box-shadow: 1px 1px 1px black;
+      } 
+    }
+   }
+ }
+header{
+    grid-area: header;
+    text-align: center;
+    background-image: linear-gradient(to bottom, gray, white);
+    margin-top:200px ;
+    
+    .logoinsta{
+        position:fixed;
+        bottom:0;
+        right:0;
+        width:10%; 
+      img{
+        width:10%;
+      
+    
+      .texto{
+        text-align: center;
+        background-image: linear-gradient(to bottom, gray, white);
+        margin-top:200px ;
+        h1{
+            color:nth($colores,2);
+            text-shadow: 1px 1px 10px $color-prinicipal;
+            text-decoration: underline;
+            background-color: $color-secundario;
+            padding: 20px;
+            p{
+                color: black;
+                text-align: center;
+                font-weight: bolder;
+                font-size: 30px;
+            }
+        }
+       }  
+     } 
+   }
+}
+
+
+footer{
+    margin-top: 90px;
+
+    .etiqueta__h2{
+        color: nth($colores, 1);
+        text-align: center;
+        font-weight: bolder;
+        background-image: linear-gradient(to top, gray, white);
+    
+       iframe{
+        grid-area: iframe;
+        display: flex;
+        padding: 10px;
+        justify-content: center;
+        width: 500px;
+        height: 350px;
+
+    
+       }
+    }
+}
+
